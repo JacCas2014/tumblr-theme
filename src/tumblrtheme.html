@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- google analytics -->
+    <!--<script></script>-->
+    <!-- pinterest verification -->
+    <!--<meta name="p:domain_verify" content="" />-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PostSummary} ({PostSummary}){/block:PostSummary}</title>
+    {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+    <meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{PostSummary}{/block:PermalinkPage}" />
+    <meta name="author" content="Jackie Casey">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- DEFAULT VARIABLES -->
+    <meta name="image:Background" content="" />
+
+    <meta name="color:Background" content="#FFFFFF" />
+    <meta name="color:Text" content="#000000" />
+    <meta name="color:Link" content="#333333"/>
+    <meta name="color:Link Hover" content="#292929" />
+
+    <meta name="if:Infinite Scroll" content="0"/>
+    <meta name="if:Show Blog Title" content="0"/>
+    <meta name="if:Show Description" content="0"/>
+    <meta name="if:Show Photo Permalinks" content="1"/>
+    <meta name="if:Show Photo Captions" content="0"/>
+
+    <meta name="text:Link One" content="" />
+    <meta name="text:Link One Title" content="" />
+    <meta name="text:Link Two" content="" />
+    <meta name="text:Link Two Title" content="" />
+    <meta name="text:Link Three" content="" />
+    <meta name="text:Link Three Title" content="" />
+    <meta name="text:Link Four" content="" />
+    <meta name="text:link Four Title" content="" />
+    <meta name="text:link Five" content="" />
+    <meta name="text:link Five Title" content="" />
+
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="xnav">
+        {block:ifshowblogtitle}
+            <a href="/">{title}</a> //
+        {/block:ifshowblogtitle}
+        {block:ifshowdescription}
+            {block:Description}<p>{Description}</p> //{/block:Description}
+        {/block:ifshowdescription}
+        <a href="/">Home</a> /
+        {block:ifLinkOneTitle}
+            <a href="{text:Link One}">{text:Link One Title}</a> /
+        {/block:ifLinkOneTitle}
+        {block:ifLinkTwoTitle}
+            <a href="{text:Link Two}">{text:Link Two Title}</a> /
+        {/block:ifLinkTwoTitle}
+        {block:ifLinkThreeTitle}
+            <a href="{text:Link Three}">{text:Link Three Title}</a> /
+        {/block:ifLinkThreeTitle}
+        {block:ifLinkFourTitle}
+            <a href="{text:Link Four}">{text:Link Four Title}</a> /
+        {/block:ifLinkFourTitle}
+        {block:ifLinkFiveTitle}
+            <a href="{text:Link Five}">{text:Link Five Title}</a> /
+        {/block:ifLinkFiveTitle}
+        {block:HasPages}
+            {block:Pages}
+                <a href="{URL}">{Label}</a> /
+            {/block:Pages}
+        {/block:HasPages}
+    </div>
+    <div class="spacer"> </div>
+</div>
+<div id="content">
+    {block:Posts}
+        {block:Photo}
+        {/block:Photo}
+        {block:Photoset}
+        {/block:Photoset}
+        {block:Text}
+        {/block:Text}
+        {block:Link}
+        {/block:Link}
+        {block:Quote}
+        {/block:Quote}
+        {block:Chat}
+        {/block:Chat}
+        {block:Audio}
+        {/block:Audio}
+        {block:Answer}
+        {/block:Answer}
+        {block:Video}
+        {/block:Video}
+    {/block:Posts}
+</div>
+</body>
+</html>
